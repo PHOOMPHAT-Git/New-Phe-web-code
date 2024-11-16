@@ -183,7 +183,7 @@
     }
 
     .feature-card:hover .hidden-image {
-      bottom: 20px;
+      bottom: 10px;
     }
 
     footer {
@@ -223,6 +223,46 @@
         transform: scale(2);
         opacity: 0;
       }
+    }
+
+    #modal-discord {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
+      border-radius: 5px;
+      padding: 8px;
+      background-color: rgba(255, 255, 255, 0.025);
+      margin-top: 20px;
+      width: 100px;
+      height: auto;
+      text-align: center;
+      display: inline-block;
+    }
+
+    #modal-discord:hover {
+      color: #179fc9;
+    }
+
+    #modal-facebook {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
+      border-radius: 5px;
+      padding: 8px;
+      background-color: rgba(255, 255, 255, 0.025);
+      margin-top: 20px;
+      width: 100px;
+      height: auto;
+      text-align: center;
+      display: inline-block;
+    }
+
+    #modal-facebook:hover {
+      color: #179fc9;
     }
 
     ::-webkit-scrollbar {
@@ -354,11 +394,12 @@
       <h2>Roblox Username !</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>User 1</h3>
+          <h3>butterking18</h3>
+          <p class="hidden-text">[ Owner ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
-          <p class="hidden-text">Tiktok : User 1</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="User 1" data-title="">
-          <p class="hidden-text">Followers : User 1</p>
+          <p class="hidden-text">Tiktok : phoomphat_phe</p>
+          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="butterking18" data-title="[ Owner ]" data-discord="https://discord.gg/yWqq7WRP" data-facebook="https://www.facebook.com/Phoomphat.phe">
+          <p class="hidden-text">Followers : 1,704</p>
         </div>
       </div>
     </section>
@@ -366,8 +407,10 @@
 
   <div id="myModal" class="modal">
     <div class="modal-content">
-      <h2 id="modal-title">Modal Title</h2>
-      <p id="modal-content">Some content here</p>
+      <h2 id="modal-title">Username</h2>
+      <p id="modal-content">Title</p>
+      <a id="modal-discord" href="#" target="_blank">Link discord</a>
+      <a id="modal-facebook" href="#" target="_blank">Link facebook</a>
     </div>
   </div>
 
@@ -379,8 +422,18 @@
       image.addEventListener("click", function() {
         const name = this.dataset.name;
         const title = this.dataset.title;
+        const discord = this.dataset.discord;
+        const facebook = this.dataset.facebook;
         document.getElementById("modal-title").textContent = name;
         document.getElementById("modal-content").textContent = title;
+        const discordLink = document.getElementById("modal-discord");
+        discordLink.textContent = "Discord";
+        discordLink.href = discord;
+        discordLink.target = "_blank";
+        const facebookLink = document.getElementById("modal-facebook");
+        facebookLink.textContent = "Facebook";
+        facebookLink.href = facebook;
+        facebookLink.target = "_blank"
         modal.classList.add("show");
       });
     });
