@@ -119,25 +119,22 @@
     }
 
     .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
-      margin-left: 40px;
+      justify-content: center;
     }
 
     .feature-card {
-      position: relative;
       background: #1f1f1f;
       padding: 20px;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
-      z-index: 1;
-      max-width: 320px;
-      margin: top;
       box-shadow: 0 0 15px rgb(0, 0, 0);
       background-color: rgba(255, 255, 255, 0.025);
-      margin-top: 15px;
+      max-width: 320px;
+      width: 100%;
     }
 
     .feature-card::after {
@@ -190,6 +187,15 @@
       border-radius: 10px;
       transition: bottom 0.3s ease;
       z-index: 2;
+      cursor: pointer;
+    }
+
+    .image {
+      bottom: -100%;
+      left: 50%;
+      width: 90%;
+      border-radius: 10px;
+      z-index: 1;
       cursor: pointer;
     }
 
@@ -494,7 +500,7 @@
         <div class="feature-card">
           <h3><span class="red-text">butterking18</span></h3>
           <p class="hidden-title">[ Owner ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : phoomphat_phe</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="butterking18"
@@ -509,7 +515,7 @@
         <div class="feature-card">
           <h3>gunXD1937</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="gunXD1937"
@@ -524,7 +530,7 @@
         <div class="feature-card">
           <h3>haijiji25</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : pleum_kpm</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="haijiji25"
@@ -539,7 +545,7 @@
         <div class="feature-card">
           <h3>MATTXD655</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : springtrap167xd</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="MATTXD655"
@@ -554,7 +560,7 @@
         <div class="feature-card">
           <h3>SANSPORCH</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="SANSPORCH"
@@ -569,7 +575,7 @@
         <div class="feature-card">
           <h3>Kaierahuzu</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="Kaierahuzu"
@@ -584,7 +590,7 @@
         <div class="feature-card">
           <h3>hiiggjjhikok</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="hiiggjjhikok"
@@ -599,7 +605,7 @@
         <div class="feature-card">
           <h3>ink79Sansv2</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="ink79Sansv2"
@@ -614,7 +620,7 @@
         <div class="feature-card">
           <h3>SUNDAYNOOBXD</h3>
           <p class="hidden-title">[ Staff ]</p>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="SUNDAYNOOBXD"
