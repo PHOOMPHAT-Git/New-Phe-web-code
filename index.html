@@ -189,6 +189,19 @@
       width: 90%;
       border-radius: 10px;
       transition: bottom 0.3s ease;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .image {
+      position: absolute;
+      bottom: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      border-radius: 10px;
+      transition: bottom 0.3s ease;
+      z-index: 2;
       cursor: pointer;
     }
 
@@ -355,11 +368,9 @@
       opacity: 0;
       transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
       animation: backgroundFade 1s forwards;
-      pointer-events: none;
     }
 
     .modal.show {
-      pointer-events: auto;
       display: flex;
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.5);
@@ -379,21 +390,21 @@
       }
     }
 
-    ul {
-        font-size: 25px;
-        color: #179fc9;
-        text-align: center;
-        margin: 0 auto;
-        padding: 0;
+    .backgroundFade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      z-index: 1;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        margin: 10px 0;
+    .feature-card:hover .backgroundFade {
+      opacity: 1;
     }
 
     .container {
@@ -471,6 +482,10 @@
         max-width: 100%;
       }
 
+      .image {
+        display: none;
+      }
+
       .feature-grid {
         flex-direction: column;
       }
@@ -495,9 +510,6 @@
     <section class="hero">
       <h2>Welcome to Phe website</h2>
       <p>[ เข้าดิสคอร์ดกันด้วยนะ ! ]</p>
-      <map class="map">
-        <a href="https://discord.com" target="_blank">Dicord</a>
-      </map>
     </section>
 
     <div class="container">
@@ -516,7 +528,7 @@
           <p class="hidden-text">[ Owner ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : phoomphat_phe</p>
-          <img class="hidden-image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-5F9D473DEFEAC3716FAA646CF8B8C59F-Png/352/352/Avatar/Webp/noFilter"
             data-name="butterking18"
             data-title="[ Owner ]"
             data-discord="https://discord.gg/yWqq7WRP"
@@ -531,7 +543,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-D2EEDB327A5726356010571F87888FBD-Png/352/352/Avatar/Webp/noFilter"
             data-name="gunXD1937"
             data-title="[ Staff ]"
             data-discord=""
@@ -546,7 +558,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : pleum_kpm</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-8C741BBB5389302338E2AF6301F20899-Png/352/352/Avatar/Webp/noFilter"
             data-name="haijiji25"
             data-title="[ Staff ]"
             data-discord=""
@@ -561,7 +573,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : springtrap167xd</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-B552A3F2B81D74C5CF628A2374BFD424-Png/352/352/Avatar/Webp/noFilter"
             data-name="MATTXD655"
             data-title="[ Staff ]"
             data-discord=""
@@ -576,7 +588,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-FA4E7B8759CEB47F72E13BBD4DC23CDD-Png/352/352/Avatar/Webp/noFilter"
             data-name="SANSPORCH"
             data-title="[ Staff ]"
             data-discord=""
@@ -591,7 +603,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-8D270A073D8B3D47042FC670E15676ED-Png/352/352/Avatar/Webp/noFilter"
             data-name="Kaierahuzu"
             data-title="[ Staff ]"
             data-discord=""
@@ -602,12 +614,12 @@
         </div>
 
         <div class="feature-card">
-          <h3>hiiggjjhikok</h3>
+          <h3>xcxxxssvfff</h3>
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
-            data-name="hiiggjjhikok"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-CE96D06F0CE67B2302D9195A4958C736-Png/352/352/Avatar/Webp/noFilter"
+            data-name="xcxxxssvfff"
             data-title="[ Staff ]"
             data-discord=""
             data-facebook=""
@@ -621,7 +633,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-156BF375E86705FEC99F80C545438467-Png/352/352/Avatar/Webp/noFilter"
             data-name="ink79Sansv2"
             data-title="[ Staff ]"
             data-discord=""
@@ -636,7 +648,7 @@
           <p class="hidden-text">[ Staff ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-D1D2FD9ADFC06374CCCDF6548DC184EB-Png/352/352/Avatar/Webp/noFilter"
             data-name="SUNDAYNOOBXD"
             data-title="[ Staff ]"
             data-discord=""
