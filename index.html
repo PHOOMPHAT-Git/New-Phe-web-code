@@ -109,6 +109,8 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
       z-index: 1;
+      max-width: 320px;
+      margin: top;
     }
 
     .feature-card::after {
@@ -294,7 +296,7 @@
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 600px) {
       .features {
         padding-left: 10px;
         padding-right: 10px;
@@ -303,6 +305,24 @@
       .features h2 {
         text-align: center;
         margin-left: 10px;
+      }
+
+      .feature-card {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .feature-card h3 {
+        font-size: 18px;
+      }
+
+      .feature-card p {
+        font-size: 14px;
+      }
+
+      .feature-card img {
+        max-width: 100%;
+        margin-top: 15px;
       }
     }
   </style>
