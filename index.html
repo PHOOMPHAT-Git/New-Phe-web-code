@@ -123,18 +123,21 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
+      margin-left: 0;
     }
 
     .feature-card {
+      position: relative;
       background: #1f1f1f;
       padding: 20px;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
+      z-index: 1;
+      max-width: 320px;
+      margin: top;
       box-shadow: 0 0 15px rgb(0, 0, 0);
       background-color: rgba(255, 255, 255, 0.025);
-      max-width: 320px;
-      width: 100%;
     }
 
     .feature-card::after {
@@ -190,24 +193,7 @@
       cursor: pointer;
     }
 
-    .image {
-      bottom: -100%;
-      left: 50%;
-      width: 90%;
-      border-radius: 10px;
-      z-index: 1;
-      cursor: pointer;
-    }
-
     .hidden-text {
-      margin-top: 10px;
-      text-align: center;
-      font-size: 16px;
-      color: #ccc;
-      transition: opacity 0.3s ease;
-    }
-
-    .hidden-title {
       margin-top: 10px;
       text-align: center;
       font-size: 16px;
@@ -392,6 +378,23 @@
       }
     }
 
+    ul {
+        font-size: 25px;
+        color: #179fc9;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
     .container {
       text-align: center;
       pointer-events: auto;
@@ -453,20 +456,21 @@
         margin-bottom: 20px;
       }
 
-      .feature-grid {
-        justify-content: center;
+      .feature-card:hover .hidden-image {
+        bottom: 3px;
       }
 
-      .image {
+      .feature-card img {
         display: none;
+      }
+
+      .feature-grid {
+        flex-direction: column;
       }
 
       .feature-card {
         max-width: 100%;
-      }
-
-      .feature-card:hover .hidden-image {
-        bottom: 3px;
+        left: 0;
       }
     }
   </style>
@@ -484,6 +488,9 @@
     <section class="hero">
       <h2>Welcome to Phe website</h2>
       <p>[ เข้าดิสคอร์ดกันด้วยนะ ! ]</p>
+      <map class="map">
+        <a href="https://discord.com" target="_blank">Dicord</a>
+      </map>
     </section>
 
     <div class="container">
@@ -499,8 +506,8 @@
       <div class="feature-grid">
         <div class="feature-card">
           <h3><span class="red-text">butterking18</span></h3>
-          <p class="hidden-title">[ Owner ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Owner ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : phoomphat_phe</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="butterking18"
@@ -514,8 +521,8 @@
 
         <div class="feature-card">
           <h3>gunXD1937</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="gunXD1937"
@@ -529,8 +536,8 @@
 
         <div class="feature-card">
           <h3>haijiji25</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : pleum_kpm</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="haijiji25"
@@ -544,8 +551,8 @@
 
         <div class="feature-card">
           <h3>MATTXD655</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : springtrap167xd</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="MATTXD655"
@@ -559,8 +566,8 @@
 
         <div class="feature-card">
           <h3>SANSPORCH</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="SANSPORCH"
@@ -574,8 +581,8 @@
 
         <div class="feature-card">
           <h3>Kaierahuzu</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="Kaierahuzu"
@@ -589,8 +596,8 @@
 
         <div class="feature-card">
           <h3>hiiggjjhikok</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="hiiggjjhikok"
@@ -604,8 +611,8 @@
 
         <div class="feature-card">
           <h3>ink79Sansv2</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="ink79Sansv2"
@@ -619,8 +626,8 @@
 
         <div class="feature-card">
           <h3>SUNDAYNOOBXD</h3>
-          <p class="hidden-title">[ Staff ]</p>
-          <img class="image" src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
+          <p class="hidden-text">[ Staff ]</p>
+          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true">
           <p class="hidden-text">Tiktok : --------</p>
           <img class="hidden-image" src="https://via.placeholder.com/300"
             data-name="SUNDAYNOOBXD"
