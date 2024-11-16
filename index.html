@@ -45,6 +45,11 @@
       color: #fff;
       font-size: 16px;
       transition: color 0.3s ease;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.025);
+      padding: 8px;
     }
 
     .nav a:hover {
@@ -53,11 +58,11 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #1f1f1f, #343434);
+      padding: 50px 20px;
       border-radius: 8px;
       margin: 20px 0;
-      background: radial-gradient(circle, #179fc900 -125%, #000000 100%);
+      background-color: rgba(255, 255, 255, 0.025);
+      box-shadow: 0 0 15px rgb(0, 0, 0);
     }
 
     .hero h2 {
@@ -99,6 +104,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      margin-left: 40px;
     }
 
     .feature-card {
@@ -111,6 +117,8 @@
       z-index: 1;
       max-width: 320px;
       margin: top;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
+      background-color: rgba(255, 255, 255, 0.025);
     }
 
     .feature-card::after {
@@ -218,20 +226,20 @@
     }
 
     ::-webkit-scrollbar {
-      width: 5px;
+      width: 2.5px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #333;
+      background: #000000;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #179fc9;
+      background: linear-gradient(to bottom, #000000, #179fc9, #000000);
       transition: background-color 0.3s;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: #007b96;
+      background: linear-gradient(to bottom, #000000, #179fc9, #000000);
     }
 
     .modal {
@@ -279,6 +287,7 @@
       max-width: 500px;
       color: #fff;
       text-align: center;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
       transform: translateY(-50px);
       opacity: 0;
       transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -364,32 +373,18 @@
     
     <section class="hero">
       <h2>Welcome to Phe website</h2>
-      <p>[ Fe!n ]</p>
+      <p>[ เข้าดิสคอร์ดกันด้วยนะ ! ]</p>
     </section>
     
     <section id="features" class="features">
-      <h2>Build a Car !</h2>
+      <h2>Roblox Username !</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>Posh_Game</h3>
+          <h3>User 1</h3>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
-          <p class="hidden-text">Tiktok : real_posh_game</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="Posh_Game" data-title="">
-          <p class="hidden-text">Followers : 1,024</p>
-        </div>
-        <div class="feature-card">
-          <h3>hkdfkhfdjhfdhdjhdhfd</h3>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
-          <p class="hidden-text">Tiktok : Pleum_kpm</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="Pleum_kpm" data-title="">
-          <p class="hidden-text">Followers : 2,345</p>
-        </div>
-        <div class="feature-card">
-          <h3>GHOST</h3>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
-          <p class="hidden-text">Tiktok : ghost98908</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="GHOST" data-title="">
-          <p class="hidden-text">Followers : 132</p>
+          <p class="hidden-text">Tiktok : User 1</p>
+          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="User 1" data-title="">
+          <p class="hidden-text">Followers : User 1</p>
         </div>
       </div>
     </section>
