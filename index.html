@@ -265,6 +265,26 @@
       color: #179fc9;
     }
 
+    #modal-tiktok {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
+      border-radius: 5px;
+      padding: 8px;
+      background-color: rgba(255, 255, 255, 0.025);
+      margin-top: 20px;
+      width: 100px;
+      height: auto;
+      text-align: center;
+      display: inline-block;
+    }
+
+    #modal-tiktok:hover {
+      color: #179fc9;
+    }
+
     ::-webkit-scrollbar {
       width: 2.5px;
     }
@@ -372,6 +392,10 @@
         max-width: 100%;
         left: -10px;
       }
+
+      .feature-card:hover .hidden-image {
+        bottom: 5px;
+      }
     }
   </style>
 </head>
@@ -398,7 +422,7 @@
           <p class="hidden-text">[ Owner ]</p>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
           <p class="hidden-text">Tiktok : phoomphat_phe</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="butterking18" data-title="[ Owner ]" data-discord="https://discord.gg/yWqq7WRP" data-facebook="https://www.facebook.com/Phoomphat.phe">
+          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="butterking18" data-title="[ Owner ]" data-discord="https://discord.gg/yWqq7WRP" data-facebook="https://www.facebook.com/Phoomphat.phe" data-tiktok="">
           <p class="hidden-text">Followers : 1,704</p>
         </div>
       </div>
@@ -411,6 +435,7 @@
       <p id="modal-content">Title</p>
       <a id="modal-discord" href="#" target="_blank">Link discord</a>
       <a id="modal-facebook" href="#" target="_blank">Link facebook</a>
+      <a id="modal-tiktok" href="#" target="_blank">Link tiktok</a>
     </div>
   </div>
 
@@ -424,6 +449,7 @@
         const title = this.dataset.title;
         const discord = this.dataset.discord;
         const facebook = this.dataset.facebook;
+        const tiktok = this.dataset.tiktok;
         document.getElementById("modal-title").textContent = name;
         document.getElementById("modal-content").textContent = title;
         const discordLink = document.getElementById("modal-discord");
@@ -434,6 +460,10 @@
         facebookLink.textContent = "Facebook";
         facebookLink.href = facebook;
         facebookLink.target = "_blank"
+        const tiktokLink = document.getElementById("modal-tiktok");
+        tiktokLink.textContent = "Tiktok";
+        tiktokLink.href = tiktok;
+        tiktokLink.target = "_blank"
         modal.classList.add("show");
       });
     });
