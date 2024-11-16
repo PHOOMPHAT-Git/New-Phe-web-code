@@ -105,6 +105,7 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       margin-left: 40px;
+      justify-items: center;
     }
 
     .feature-card {
@@ -119,6 +120,7 @@
       margin: top;
       box-shadow: 0 0 15px rgb(0, 0, 0);
       background-color: rgba(255, 255, 255, 0.025);
+      width: 100%;
     }
 
     .feature-card::after {
@@ -323,6 +325,14 @@
         font-size: 20px;
         margin-bottom: 20px;
       }
+
+      .feature-grid {
+        margin-left: 0;
+      }
+
+      .feature-card {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -344,20 +354,6 @@
     <section id="features" class="features">
       <h2>Roblox Username !</h2>
       <div class="feature-grid">
-        <div class="feature-card">
-          <h3>User 1</h3>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
-          <p class="hidden-text">Tiktok : User 1</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="User 1" data-title="">
-          <p class="hidden-text">Followers : User 1</p>
-        </div>
-        <div class="feature-card">
-          <h3>User 1</h3>
-          <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
-          <p class="hidden-text">Tiktok : User 1</p>
-          <img class="hidden-image" src="https://via.placeholder.com/300" alt="Additional Image" data-name="User 1" data-title="">
-          <p class="hidden-text">Followers : User 1</p>
-        </div>
         <div class="feature-card">
           <h3>User 1</h3>
           <img src="https://github.com/Sylraz-X/Pictures/blob/main/PHE%20New%20LOGO.png?raw=true" alt="Main Image">
