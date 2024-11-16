@@ -343,7 +343,7 @@
     .modal {
       display: none;
       position: fixed;
-      z-index:9999;
+      z-index: 9999;
       left: 0;
       top: 0;
       width: 100%;
@@ -355,9 +355,11 @@
       opacity: 0;
       transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
       animation: backgroundFade 1s forwards;
+      pointer-events: none;
     }
 
     .modal.show {
+      pointer-events: auto;
       display: flex;
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.5);
