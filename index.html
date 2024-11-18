@@ -40,16 +40,29 @@
     }
 
     .nav a {
-      margin-left: 20px;
+      margin-left: 5px;
       text-decoration: none;
       color: #fff;
       font-size: 16px;
       transition: color 0.3s ease;
-      box-shadow: 0 0 15px rgb(0, 0, 0);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
       border-radius: 5px;
       box-sizing: border-box;
       background-color: rgba(255, 255, 255, 0.025);
       padding: 8px;
+      animation: rgbGlow 3s infinite alternate;
+    }
+
+    @keyframes rgbGlow {
+      0% {
+        box-shadow: 0 0 5px #179fc9, 0 0 10px #000000;
+      }
+      50% {
+        box-shadow: 0 0 10px #179fc9, 0 0 15px #000000;
+      }
+      100% {
+        box-shadow: 0 0 5px #179fc9, 0 0 10px #000000;
+      }
     }
 
     .nav a:hover {
@@ -68,6 +81,19 @@
       box-sizing: border-box;
       background-color: rgba(255, 255, 255, 0.025);
       padding: 8px;
+      animation: rgbGlowMap 3s infinite alternate;
+    }
+
+    @keyframes rgbGlowMap {
+      0% {
+        box-shadow: 0 0 5px #179fc9, 0 0 10px #000000;
+      }
+      50% {
+        box-shadow: 0 0 10px #179fc9, 0 0 15px #000000;
+      }
+      100% {
+        box-shadow: 0 0 5px #179fc9, 0 0 10px #000000;
+      }
     }
 
     .map a:hover {
@@ -80,7 +106,53 @@
       border-radius: 8px;
       margin: 20px 0;
       background-color: rgba(255, 255, 255, 0.025);
-      box-shadow: 0 0 15px rgb(0, 0, 0);
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+      padding: 2px;
+      background: conic-gradient(
+        from 0deg,
+        #12121200,
+        #12121200,
+        #12121200,
+        #12121200,
+        #00ffee,
+        #12121200,
+        #12121200,
+        #12121200,
+        #12121200
+      );
+      background-size: 200% 200%;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      animation: continuous-glow 5s linear infinite;
+    }
+
+    @keyframes continuous-glow {
+      0% {
+        background-position: 10% ;
+        opacity: 0;
+      }
+      50% {
+        background-position: 50% ;
+        opacity: 1;
+      }
+      100% {
+        background-position: 90% ;
+        opacity: 0;
+      }
     }
 
     .hero h2 {
@@ -245,7 +317,7 @@
       position: absolute;
       border-radius: 50%;
       background: transparent;
-      border: 8px solid rgba(23, 159, 201, 0.8);
+      border: 5px solid rgba(23, 159, 201, 0.8);
       transform: scale(0);
       animation: expandFade 0.5s ease-out forwards;
       pointer-events: none;
@@ -308,7 +380,7 @@
       border-radius: 5px;
       padding: 8px;
       background-color: rgba(255, 255, 255, 0.025);
-      margin-top: 20px;
+      margin-top: 10px;
       width: 100px;
       height: auto;
       text-align: center;
@@ -328,7 +400,7 @@
       border-radius: 5px;
       padding: 8px;
       background-color: rgba(255, 255, 255, 0.025);
-      margin-top: 20px;
+      margin-top: 10px;
       width: 100px;
       height: auto;
       text-align: center;
@@ -562,7 +634,7 @@
           <h3>MATTXD655</h3>
           <p class="hidden-text">[ Staff ]</p>
           <p class="hidden-text">Tiktok : springtrap167xd</p>
-          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-B552A3F2B81D74C5CF628A2374BFD424-Png/352/352/Avatar/Webp/noFilter"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-14EB371773AFCE5F9733138ECB3ADE47-Png/352/352/Avatar/Webp/noFilter"
             data-name="MATTXD655"
             data-title="[ Staff ]"
             data-discord=""
@@ -660,7 +732,7 @@
           <h3>gunXD1937</h3>
           <p class="hidden-text">[ Staff ]</p>
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-D2EEDB327A5726356010571F87888FBD-Png/352/352/Avatar/Webp/noFilter"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-B46C1775636F4A76FE120CF49FE5D6E7-Png/352/352/Avatar/Webp/noFilter"
             data-name="gunXD1937"
             data-title="[ Staff ]"
             data-discord=""
@@ -674,7 +746,7 @@
           <h3>ink79Sansv2</h3>
           <p class="hidden-text">[ Staff ]</p>
           <p class="hidden-text">Tiktok : --------</p>
-          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-156BF375E86705FEC99F80C545438467-Png/352/352/Avatar/Webp/noFilter"
+          <img class="hidden-image" src="https://tr.rbxcdn.com/30DAY-Avatar-5592318701A26EB8EAC5B001ECD0ECF7-Png/352/352/Avatar/Webp/noFilter"
             data-name="ink79Sansv2"
             data-title="[ Staff ]"
             data-discord=""
@@ -800,17 +872,71 @@
             e.preventDefault();
         });
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-                e.preventDefault();
-            }
-        });
-
         document.addEventListener('mousedown', function(e) {
             if (e.button === 0) {
                 e.preventDefault();
             }
         });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                openCustomNotification();
+            }
+        });
+
+        let messageIndex = 0;
+        let isCooldown = false;
+
+        function openCustomNotification() {
+            if (isCooldown) return;
+
+            const messages = [
+                'ทำไรอ่ะ',
+                'อย่าแม้แต่จะคิด',
+                'ก็อปโค้ดระวังโดนเล่นนะ',
+                'ยังไม่หยุดอีก',
+                'จะหยุดยัง',
+                'ระวังไว้ให้ดีละกัน',
+                'ระบบได้ส่งที่อยู่ของคุณไปยังเจ้าของเว็ปแล้ว'
+            ];
+
+            const message = messages[messageIndex];
+            
+            const notification = document.createElement('div');
+            notification.innerText = message;
+            notification.style.position = 'fixed';
+            notification.style.top = '25px';
+            notification.style.left = '50%';
+            notification.style.transform = 'translateX(-50%)';
+            notification.style.backgroundColor = '#179fc9';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.fontSize = '18px';
+            notification.style.zIndex = '1000';
+            notification.style.opacity = '0';
+            notification.style.transition = 'opacity 1s ease';
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.opacity = '1';
+            }, 10);
+
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.remove();
+                }, 1000);
+            }, 2000);
+
+            messageIndex = (messageIndex + 1) % messages.length;
+
+            isCooldown = true;
+            setTimeout(() => {
+                isCooldown = false;
+            }, 3000);
+        }
 
         document.addEventListener('click', (event) => {
             const circle = document.createElement('div');
