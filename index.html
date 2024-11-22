@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>[ New ] Phe Website</title>
   <style>
     * {
@@ -19,6 +19,37 @@
       background: radial-gradient(circle, #179fc9 -125%, #000000 100%);
       user-select: none;
       transition: background 5s ease-in-out;
+      margin: 0;
+      position: relative;
+      min-height: 1000px;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .square {
+      position: absolute;
+      bottom: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      background-color: #179fc9;
+      animation: floatUp 4s ease-in-out infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(250) scale(1);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(250) scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-850px) scale(2.5);
+        opacity: 0;
+      }
     }
 
     .container {
@@ -525,7 +556,7 @@
         color: rgb(255, 51, 0);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 680px) {
       .nav a {
         margin-left: 5px;
         text-decoration: none;
@@ -585,12 +616,14 @@
         <a href="https://discord.gg/yWqq7WRP" target="_blank">Dicord</a>
         <a href="https://www.tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a>
       </nav>
-    </header>    
+    </header>
     
-    <section class="hero">
-      <h2>Welcome to Phe website</h2>
-      <p>[ เข้าดิสคอร์ดกันด้วยนะ ! ]</p>
-    </section>
+    <div class="pro">
+      <section class="hero">
+        <h2>Welcome to Phe website</h2>
+        <p>[ เข้าดิสคอร์ดกันด้วยนะ ! ]</p>
+      </section>
+    </div>
 
     <div class="container">
         <h2>[ Live countdown ]</h2>
@@ -952,6 +985,20 @@
                 circle.remove();
             }, 500);
         });
+
+        function createsquare() {
+            const square = document.createElement('div');
+            square.className = 'square';
+            square.style.left = Math.random() * 100 + 'vw';
+
+            document.body.appendChild(square);
+
+            setTimeout(() => {
+              square.remove();
+            }, 4000);
+        }
+
+        setInterval(createsquare, 250);
   </script>
 </body>
 </html>
