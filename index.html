@@ -32,15 +32,20 @@
 
     <div id="notification" class="notification">
       <div class="notification-content">
-        <p class="big-notification-message"><span class="red-text">> 999 <</span></p>
-        <img src="https://via.placeholder.com/150" alt="Notification Icon" class="notification-icon">
+        <p class="big-notification-message"><span class="red-text">> 08/12/2019 <</span></p>
+        <img src="https://github.com/PHOOMPHAT-Git/New-Phe-web-code/blob/main/Juice.png?raw=true" alt="Notification Icon" class="notification-icon">
         <p class="notification-message">Rest in peace. <span class="red-text">Juice WRLD</span></p>
-        <a onclick="closeNotification()" class="btn">Close</a>
-        <a id="playButton" onclick="toggleMusic()" class="btn">Play Music</a>
+        <div class="music-controls">
+          <a id="previousButton" onclick="previousSong()" class="btn"><<</a>
+          <a id="playButton" onclick="toggleMusic()" class="btn">Play</a>
+          <a id="nextButton" onclick="nextSong()" class="btn">>></a>
+        </div>
+        <p id="trackTitle">Name song : </p>
+        <a onclick="closeNotification()" class="btnClose">Close</a>
       </div>
-    </div>       
+    </div>
     
-    <audio id="music" src="https://raw.githubusercontent.com/PHOOMPHAT-Git/New-Phe-web-code/refs/heads/main/In%20My%20Head%20-%20Juice%20WRLD.mp3"></audio>
+    <audio id="music"></audio>
     
     <section id="features" class="features">
       <h2>[ Roblox Username ]</h2>
