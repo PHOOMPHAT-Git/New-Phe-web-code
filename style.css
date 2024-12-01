@@ -137,7 +137,7 @@ body {
   top: 325px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -497,7 +497,7 @@ body {
 }
 
 .modal-content {
-  background-color: #333;
+  background-color: #ff3c0036;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
