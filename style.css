@@ -730,7 +730,7 @@ body {
   }
   .notification {
     position: fixed;
-    top: 125px;
+    top: 150px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.932);
