@@ -1,20 +1,10 @@
-function closeNotification() {
-  const notification = document.getElementById("notification");
-  const message = notification.querySelector(".notification-message");
-
-  notification.style.opacity = "0";
-  
-  message.style.opacity = "0";
-
-  setTimeout(() => {
-    notification.style.display = "none";
-  }, 1000);
-}
-
-window.onload = function() {
-  document.getElementById("loading-message").style.display = "block";
-  startCountdown();
-};
+const musicList = [
+  { url: "https://raw.githubusercontent.com/PHOOMPHAT-GIT/New-Phe-web-code/refs/heads/main/spotifydown.com%20-%20Goodbye.mp3", name: "Goodbye" },
+  { url: "https://raw.githubusercontent.com/PHOOMPHAT-GIT/New-Phe-web-code/refs/heads/main/spotifydown.com%20-%20In%20My%20Head.mp3", name: "In My Head" },
+  { url: "https://raw.githubusercontent.com/PHOOMPHAT-GIT/New-Phe-web-code/refs/heads/main/spotifydown.com%20-%20Spend%20It.mp3", name: "Spend It" },
+  { url: "https://raw.githubusercontent.com/PHOOMPHAT-GIT/New-Phe-web-code/refs/heads/main/spotifydown.com%20-%20Party%20By%20Myself.mp3", name: "Party By Myself" },
+  { url: "https://raw.githubusercontent.com/PHOOMPHAT-GIT/New-Phe-web-code/refs/heads/main/spotifydown.com%20-%20Best%20Friend%20(with%20Fall%20Out%20Boy).mp3", name: "Best Friend" }
+];
 
 function startCountdown() {
   const targetDate = new Date('December 6, 2024 19:30:00').getTime();
@@ -46,19 +36,80 @@ let isPlaying = false;
 const audio = document.getElementById('music');
 const playButton = document.getElementById('playButton');
 
+let currentSongIndex = 0;
+
+window.onload = function() {
+  document.getElementById("loading-message").style.display = "block";
+  startCountdown();
+
+  const audio = document.getElementById('music');
+  audio.src = musicList[currentSongIndex].url;
+
+  document.getElementById("trackTitle").textContent = "Name song : " + musicList[currentSongIndex].name;
+};
+
+function nextSong() {
+  currentSongIndex = (currentSongIndex + 1) % musicList.length;
+  const audio = document.getElementById('music');
+  audio.src = musicList[currentSongIndex].url;
+  playButton.textContent = "Play";
+  document.getElementById("trackTitle").textContent = "Name song : " + musicList[currentSongIndex].name;
+}
+
+function previousSong() {
+  currentSongIndex = (currentSongIndex - 1 + musicList.length) % musicList.length;
+  const audio = document.getElementById('music');
+  audio.src = musicList[currentSongIndex].url;
+  playButton.textContent = "Play";
+  document.getElementById("trackTitle").textContent = "Name song : " + musicList[currentSongIndex].name;
+}
+
 function toggleMusic() {
-  if (isPlaying) {
-    audio.pause();
-    playButton.textContent = 'Play Music';
-  } else {
+  if (audio.paused) {
     audio.play();
-    playButton.textContent = 'Stop Music';
+    playButton.textContent = "Pause";
+    graduallyIncreaseVolume();
+  } else {
+    playButton.textContent = "Play";
+    graduallyDecreaseVolume();
   }
-  isPlaying = !isPlaying;
+}
+
+function graduallyIncreaseVolume() {
+  let volume = 0;
+  audio.volume = volume;
+  const interval = setInterval(() => {
+    if (volume < 0.10) {
+      volume += 0.01;
+      audio.volume = volume;
+    } else {
+      clearInterval(interval);
+    }
+  }, 50);
+}
+
+function graduallyDecreaseVolume() {
+  let volume = audio.volume;
+  const interval = setInterval(() => {
+    if (volume > 0) {
+      volume -= 0.01;
+      audio.volume = volume;
+    } else {
+      clearInterval(interval);
+      audio.pause();
+    }
+  }, 50);
 }
 
 function closeNotification() {
-  document.getElementById('notification').style.display = 'none';
+  const notification = document.getElementById("notification");
+  
+  notification.style.transition = "opacity 1s ease";
+  notification.style.opacity = "0";
+
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 1000);
 }
 
 const modal = document.getElementById("myModal");
