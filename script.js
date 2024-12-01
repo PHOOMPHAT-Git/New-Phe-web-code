@@ -79,8 +79,8 @@ function graduallyIncreaseVolume() {
   let volume = 0;
   audio.volume = volume;
   const interval = setInterval(() => {
-    if (volume < 0.10) {
-      volume += 0.01;
+    if (volume < 1) {
+      volume += 0.05;
       audio.volume = volume;
     } else {
       clearInterval(interval);
@@ -92,7 +92,7 @@ function graduallyDecreaseVolume() {
   let volume = audio.volume;
   const interval = setInterval(() => {
     if (volume > 0) {
-      volume -= 0.01;
+      volume -= 0.05;
       audio.volume = volume;
     } else {
       clearInterval(interval);
