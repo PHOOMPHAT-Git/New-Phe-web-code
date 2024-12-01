@@ -134,7 +134,7 @@ body {
 
 .notification {
   position: fixed;
-  top: 350px;
+  top: 325px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.932);
@@ -143,7 +143,7 @@ body {
   border-radius: 8px;
   opacity: 1;
   width: 90%;
-  max-width: 300px;
+  max-width: 375px;
   transition: opacity 1s ease;
   z-index: 1000;
 }
@@ -152,7 +152,34 @@ body {
   opacity: 0;
 }
 
+.music-controls {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
 #notification a.btn {
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0;
+  margin: 5px;
+  background-color: #ff3b00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#notification a.btn:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+
+#notification a.btnClose {
   display: inline-block;
   width: 150px;
   height: 40px;
@@ -167,7 +194,7 @@ body {
   font-size: 16px;
 }
 
-#notification a.btn:hover {
+#notification a.btnClose:hover {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
 }
@@ -201,6 +228,21 @@ body {
 }
 
 .btn:hover {
+  background: #ffffff;
+}
+
+.btnClose {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ff3b00;
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btnClose:hover {
   background: #ffffff;
 }
 
